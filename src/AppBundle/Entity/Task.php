@@ -34,6 +34,7 @@ class Task
 
     /**
      * @ORM\OneToMany(targetEntity="Tag", mappedBy="task", cascade={"persist"})
+     * @Assert\Valid()
      */
     protected $tag;
 
