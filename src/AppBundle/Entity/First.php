@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * First
@@ -25,6 +26,7 @@ class First
      * @var string
      *
      * @ORM\Column(name="firstName", type="string", length=255)
+     * @Assert\NotBlank()
      */
     private $firstName;
 
@@ -32,6 +34,7 @@ class First
      * @var \DateTime
      *
      * @ORM\Column(name="dob", type="datetime")
+     * @Assert\NotBlank()
      */
     private $dob;
 
@@ -39,6 +42,7 @@ class First
      * @var integer
      *
      * @ORM\Column(name="favoriteNumber", type="integer")
+     * @Assert\NotBlank()
      */
     private $favoriteNumber;
 
